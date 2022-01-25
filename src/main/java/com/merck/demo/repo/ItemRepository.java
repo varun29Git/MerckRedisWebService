@@ -38,4 +38,23 @@ public class ItemRepository {
     public Map<Integer, Item> getAllItems() {
         return hashOperations.entries(KEY);
     }
+    
+    public void updateItem(Item item) {
+        addItem(item);
+    }
+ 
+    public void deleteItem(int id) {
+        hashOperations.delete(KEY, id);
+ 
+    }
+ 
+    public Item getItem(int id) {
+        return (Item) hashOperations.get(KEY, id);
+    }
+    
+    
+    
+    
+    
+    
 }
